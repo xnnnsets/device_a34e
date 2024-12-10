@@ -2,9 +2,13 @@ system                               /system                   erofs     ro     
 system                               /system                   f2fs      ro               wait,,avb=vbmeta_system,logical,first_stage_mount,avb_keys=/avb/q-gsi.avbpubkey:/avb/r-gsi.avbpubkey:/avb/s-gsi.avbpubkey
 system                               /system                   ext4      ro               wait,,avb=vbmeta_system,logical,first_stage_mount,avb_keys=/avb/q-gsi.avbpubkey:/avb/r-gsi.avbpubkey:/avb/s-gsi.avbpubkey
 system_ext                           /system_ext               erofs     ro               wait,,avb=vbmeta_system,logical,first_stage_mount,avb_keys=/avb/q-gsi.avbpubkey:/avb/r-gsi.avbpubkey:/avb/s-gsi.avbpubkey
+system_ext                           /system_ext               ext4     ro               wait,,avb=vbmeta_system,logical,first_stage_mount,avb_keys=/avb/q-gsi.avbpubkey:/avb/r-gsi.avbpubkey:/avb/s-gsi.avbpubkey
 vendor                               /vendor                   erofs     ro               wait,,avb,logical,first_stage_mount
+vendor                               /vendor                   ext4     ro               wait,,avb,logical,first_stage_mount
 product                              /product                  erofs     ro               wait,,avb,logical,first_stage_mount
+product                              /product                  ext4     ro               wait,,avb,logical,first_stage_mount
 odm                                  /odm                      erofs     ro               wait,,avb,logical,first_stage_mount
+odm                                  /odm                      ext4     ro               wait,,avb,logical,first_stage_mount
 /dev/block/by-name/metadata          /metadata                 ext4      noatime,nosuid,nodev,noauto_da_alloc,discard,journal_checksum,data=ordered,errors=panic,sync       wait,check,formattable,first_stage_mount
 /dev/block/by-name/userdata          /data                     f2fs      noatime,nosuid,nodev,discard,usrquota,grpquota,fsync_mode=nobarrier,reserve_root=32768,resgid=5678,whint_mode=fs-based,inlinecrypt     wait,check,,quota,reservedsize=128M,latemount,,checkpoint=fs,fileencryption=aes-256-xts:aes-256-cts:v2,keydirectory=/metadata/vold/metadata_encryption,fsverity,fscompress
 /dev/block/by-name/cache             /cache                    ext4      noatime,nosuid,nodev,noauto_da_alloc,discard,journal_checksum,data=ordered,errors=panic        wait,check,formattable
