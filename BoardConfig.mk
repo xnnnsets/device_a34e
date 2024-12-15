@@ -157,7 +157,51 @@ BOARD_AVB_VBMETA_SYSTEM_ROLLBACK_INDEX_LOCATION := 2
 BOARD_VNDK_VERSION := 31
 
 # VINTF
-DEVICE_MANIFEST_FILE += $(DEVICE_PATH)/manifest.xml
+#DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE += $(DEVICE_PATH)/configs/framework_compatibility_matrix.xml
+DEVICE_MATRIX_FILE += $(DEVICE_PATH)/configs/compatibility_matrix.xml
+DEVICE_MANIFEST_FILE += $(DEVICE_PATH)/configs/manifest.xml
+DEVICE_MANIFEST_FILE += $(DEVICE_PATH)/configs/manifest/android.hardware.cas@1.2-service-lazy.xml
+DEVICE_MANIFEST_FILE += $(DEVICE_PATH)/configs/manifest/android.hardware.dumpstate@1.1-service-lazy.xml
+DEVICE_MANIFEST_FILE += $(DEVICE_PATH)/configs/manifest/android.hardware.health@2.1-samsung.xml
+DEVICE_MANIFEST_FILE += $(DEVICE_PATH)/configs/manifest/android.hardware.neuralnetworks@1.3-service-mtk-mdla-dsp-gpu.xml
+DEVICE_MANIFEST_FILE += $(DEVICE_PATH)/configs/manifest/android.hardware.sensors@2.0-multihal.xml
+DEVICE_MANIFEST_FILE += $(DEVICE_PATH)/configs/manifest/android.hardware.usb@1.3-service.coral.xml
+DEVICE_MANIFEST_FILE += $(DEVICE_PATH)/configs/manifest/android.hardware.wifi@1.0-service.xml
+DEVICE_MANIFEST_FILE += $(DEVICE_PATH)/configs/manifest/android.hardware.wifi.hostapd.xml
+DEVICE_MANIFEST_FILE += $(DEVICE_PATH)/configs/manifest/android.hardware.wifi.supplicant.xml
+DEVICE_MANIFEST_FILE += $(DEVICE_PATH)/configs/manifest/deviceManifest.xml
+DEVICE_MANIFEST_FILE += $(DEVICE_PATH)/configs/manifest/engmode_manifest.xml
+DEVICE_MANIFEST_FILE += $(DEVICE_PATH)/configs/manifest/face-default-sec.xml
+DEVICE_MANIFEST_FILE += $(DEVICE_PATH)/configs/manifest/hyper-default-sec.xml
+DEVICE_MANIFEST_FILE += $(DEVICE_PATH)/configs/manifest/lights-default-sec.xml
+DEVICE_MANIFEST_FILE += $(DEVICE_PATH)/configs/manifest/manifest_android.hardware.drm@1.4-service.clearkey.xml
+DEVICE_MANIFEST_FILE += $(DEVICE_PATH)/configs/manifest/manifest_android.hardware.drm@1.4-service.widevine.xml
+DEVICE_MANIFEST_FILE += $(DEVICE_PATH)/configs/manifest/manifest_hwcomposer.xml
+DEVICE_MANIFEST_FILE += $(DEVICE_PATH)/configs/manifest/output.txt
+DEVICE_MANIFEST_FILE += $(DEVICE_PATH)/configs/manifest/power-default.xml
+DEVICE_MANIFEST_FILE += $(DEVICE_PATH)/configs/manifest/sec.android.hardware.nfc@1.2-service.xml
+DEVICE_MANIFEST_FILE += $(DEVICE_PATH)/configs/manifest/sec_c2_manifest_default0_1_2.xml
+DEVICE_MANIFEST_FILE += $(DEVICE_PATH)/configs/manifest/vaultkeeper_manifest.xml
+DEVICE_MANIFEST_FILE += $(DEVICE_PATH)/configs/manifest/vendor.samsung.hardware.authfw@1.0-manifest.xml
+DEVICE_MANIFEST_FILE += $(DEVICE_PATH)/configs/manifest/vendor.samsung.hardware.biometrics.fingerprint@3.0-service.xml
+DEVICE_MANIFEST_FILE += $(DEVICE_PATH)/configs/manifest/vendor.samsung.hardware.radio.exclude.mediatek.xml
+DEVICE_MANIFEST_FILE += $(DEVICE_PATH)/configs/manifest/vendor.samsung.hardware.radio.exclude_ship.mediatek.xml
+DEVICE_MANIFEST_FILE += $(DEVICE_PATH)/configs/manifest/vendor.samsung.hardware.radio_manifest_2_30.xml
+DEVICE_MANIFEST_FILE += $(DEVICE_PATH)/configs/manifest/vendor.samsung.hardware.security.fkeymaster-service.xml
+DEVICE_MANIFEST_FILE += $(DEVICE_PATH)/configs/manifest/vendor.samsung.hardware.security.hdcp.wifidisplay-default.xml
+DEVICE_MANIFEST_FILE += $(DEVICE_PATH)/configs/manifest/vendor.samsung.hardware.security.widevine.keyprov-service.xml
+DEVICE_MANIFEST_FILE += $(DEVICE_PATH)/configs/manifest/vendor.samsung.hardware.security.wsm.service-manifest.xml
+DEVICE_MANIFEST_FILE += $(DEVICE_PATH)/configs/manifest/vendor.samsung.hardware.sehradio_manifest_2_30.xml
+DEVICE_MANIFEST_FILE += $(DEVICE_PATH)/configs/manifest/vendor.samsung.hardware.snap-default.xml
+DEVICE_MANIFEST_FILE += $(DEVICE_PATH)/configs/manifest/vendor.samsung.hardware.thermal@1.0-manifest.xml
+DEVICE_MANIFEST_FILE += $(DEVICE_PATH)/configs/manifest/vendor.samsung.hardware.tlc.hdm@1.1-manifest.xml
+DEVICE_MANIFEST_FILE += $(DEVICE_PATH)/configs/manifest/vendor.samsung.hardware.tlc.iccc@1.0-manifest.xml
+DEVICE_MANIFEST_FILE += $(DEVICE_PATH)/configs/manifest/vendor.samsung.hardware.tlc.kg@1.1-manifest.xml
+DEVICE_MANIFEST_FILE += $(DEVICE_PATH)/configs/manifest/vendor.samsung.hardware.tlc.mpos_tui@1.0-manifest.xml
+DEVICE_MANIFEST_FILE += $(DEVICE_PATH)/configs/manifest/vendor.samsung.hardware.vibrator-default.xml
+DEVICE_MANIFEST_FILE += $(DEVICE_PATH)/configs/manifest/vendor.samsung.hardware.wifi@2.0-service.xml
+DEVICE_MANIFEST_FILE += $(DEVICE_PATH)/configs/manifest/vendor.samsung.hardware.wifi.hostapd.xml
+
 
 # Inherit the proprietary files
 include vendor/samsung/a34x/BoardConfigVendor.mk
